@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 
 @Module({
   imports: [],
+  providers: [],
   exports: [],
 })
-export class CoreModule {}
+export class ProductModule {}
