@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
+import { MotherboardModule } from '@core/product/motherboard/motherboard.module';
 
 @Module({
-  imports: [],
+  imports: [MotherboardModule],
   providers: [],
-  exports: [],
+  exports: [MotherboardModule],
 })
 export class ProductModule {}
