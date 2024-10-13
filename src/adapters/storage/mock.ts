@@ -100,5 +100,3 @@ export const motherboards: Motherboard[] = [
     maxMemory: 128,
   },
 ];
-
-console.log(motherboards);
