@@ -10,7 +10,7 @@ async function bootstrap() {
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: false,
     allowedHeaders: 'Content-Type, Authorization',
-  })
+  });
 
   const config = new DocumentBuilder()
     .setTitle('PC configurator')
