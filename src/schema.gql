@@ -1,0 +1,17 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Motherboard {
+  id: ID!
+  name: String!
+  chipset: String!
+  formFactor: String!
+  socket: String!
+  memorySlots: Float!
+  maxMemory: Float!
+}
+
+type Query {
+  getAll: [Motherboard!]!
+}

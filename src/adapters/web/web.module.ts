@@ -3,6 +3,8 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { GetAllMotherboardsResolver } from './product/motherboard/resolvers/getAll.resolver';
+import { join } from 'path'
+import * as process from 'process';
 
 @Module({
   providers: [GetAllMotherboardsResolver],
@@ -10,7 +12,8 @@ import { GetAllMotherboardsResolver } from './product/motherboard/resolvers/getA
     CoreModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: true,
+      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      playground: true,
     }),
   ],
 })
